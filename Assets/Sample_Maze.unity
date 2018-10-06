@@ -627,7 +627,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 1.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 2
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -638,7 +638,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 622607693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -3.21}
+  m_LocalPosition: {x: 0, y: 5, z: -19.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}
@@ -982,6 +982,9 @@ GameObject:
   - component: {fileID: 843088976}
   - component: {fileID: 843088975}
   - component: {fileID: 843088974}
+  - component: {fileID: 843088978}
+  - component: {fileID: 843088979}
+  - component: {fileID: 843088980}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -999,7 +1002,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &843088975
 MeshRenderer:
@@ -1050,12 +1053,58 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843088973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.9, y: 3.0002174, z: -1.01}
+  m_LocalPosition: {x: 20.29, y: 8.39, z: -8.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &843088978
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843088973}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &843088979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843088973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3362629646d4bf43bbcdcfd43ee7cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrCamera: {fileID: 843088977}
+  speed: 3
+  toggleangle: 0
+--- !u!143 &843088980
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843088973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 1.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1138199743
 Prefab:
   m_ObjectHideFlags: 0
